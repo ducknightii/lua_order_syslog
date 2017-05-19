@@ -1,5 +1,5 @@
 local Log     = require "log"
-local date    = require "log.date"
+local date    = require "date"
 local string  = require "string"
 local schar   = string.char
 local sbyte   = string.byte

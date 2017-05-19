@@ -2,7 +2,7 @@ local string = require "string"
 local math   = require "math"
 local Log    = require "log"
 local cjson = require "cjson"
-local date   = require "log.date"
+local date   = require "date"
 
 local mod,floor,ceil,abs,pow = math.fmod,math.floor,math.ceil,math.abs,math.pow
 local fmt = string.format

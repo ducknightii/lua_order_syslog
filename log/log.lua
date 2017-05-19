@@ -1,6 +1,6 @@
 local table  = require "table"
 local string = require "string"
-local date   = require "log.date"
+local date   = require "date"
 
 local destroy_list = {}
 local loggers_list = setmetatable({},{__mode = 'k'})
