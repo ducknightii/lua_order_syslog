@@ -1,14 +1,13 @@
 
-
-local LOG     = LogLib.new('trace', require "log.writer.net.udp".new({
+ local LOG     = require"log.log".new('trace', require "log.writer.net.udp".new({
         host = host,
         port = port,
---        sock_type = "udp",
---        flush_limit = 1,
---        drop_limit = 99999,
-    }), require "log.formatter.qhsysformat".new(), SysLog.qhinit('CATEGORY'))
+        --        sock_type = "udp",
+        --        flush_limit = 1,
+        --        drop_limit = 99999,
+    }), require "log.formatter.qhsysformat".new(), require "log.logformat.syslog".qhinit('CATEGORY'))
 
     LOG.info       ('MESSAGE', {a="a"})
 
 --res:
-
+<14>1 2017-05-19T09:56:58+00:00 7686d731da5c lua 12 - - CATEGORY.MESSAGE INFO	[2017-05-19 09:56:58]	{"a":"a"}   {"server":"","ip":"10.18.120.78","url":"\/test","http_method":"GET"}
