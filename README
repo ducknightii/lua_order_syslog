@@ -1,0 +1,14 @@
+
+
+local LOG     = LogLib.new('trace', require "log.writer.net.udp".new({
+        host = host,
+        port = port,
+--        sock_type = "udp",
+--        flush_limit = 1,
+--        drop_limit = 99999,
+    }), require "log.formatter.qhsysformat".new(), SysLog.qhinit('CATEGORY'))
+
+    LOG.info       ('MESSAGE', {a="a"})
+
+--res:
+
